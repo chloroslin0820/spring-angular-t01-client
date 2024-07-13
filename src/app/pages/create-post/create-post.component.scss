@@ -1,0 +1,15 @@
+.bg-snow-text-sky {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+.center-card {
+    margin: auto;
+    max-width: 600px;
+    padding: 30px;
+    margin-top: 10px;
+    background-color: var(--secondary-color);
+
+    mat-form-field {
+        width: 100%;
+    }
+}

@@ -10,6 +10,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatChipsModule } from '@angular/material/chips';
 
 @NgModule({
   declarations: [],
@@ -25,6 +26,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatListModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
+    MatChipsModule,
   ],
   exports: [
     MatInputModule,
@@ -38,6 +40,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatListModule,
     MatSnackBarModule,
     MatProgressSpinnerModule,
+    MatChipsModule,
   ],
 })
 export class AngularMaterialModule {}
