@@ -35,6 +35,7 @@ export class CreatePostComponent {
 
     if (value && !this.tags.includes(value)) {
       this.tags.push(value);
+      event.input.value = '';
     }
   }
 

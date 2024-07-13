@@ -41,7 +41,8 @@
             <input 
                 placeholder="New Tag..."
                 [matChipInputFor]="chipGrid"
-                (matChipInputTokenEnd)="addTag($event)"
+                (matChipInputTokenEnd)="addTag($event); $event.input.value = ''"
+                (keydown.enter)="addTag($event)"
             />
 
         </mat-form-field>
