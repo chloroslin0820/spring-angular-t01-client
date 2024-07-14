@@ -1,8 +1,11 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
-const API_URL = 'https://chloroslin-spring-angular-t01-server.onrender.com/';
+const API_URL = 
+  environment.API_DEV_URL || 
+  environment.API_PROD_URL;
 
 @Injectable({
   providedIn: 'root'
