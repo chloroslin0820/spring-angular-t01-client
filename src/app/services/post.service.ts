@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
 
 const API_URL = 
-  environment.API_URL;
+  environment.API_URL || environment.API_DEV_URL;
 
 @Injectable({
   providedIn: 'root'
