@@ -11,6 +11,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [],
@@ -27,6 +28,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatChipsModule,
+    MatGridListModule,
   ],
   exports: [
     MatInputModule,
@@ -41,6 +43,7 @@ import { MatChipsModule } from '@angular/material/chips';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatChipsModule,
+    MatGridListModule,
   ],
 })
 export class AngularMaterialModule {}

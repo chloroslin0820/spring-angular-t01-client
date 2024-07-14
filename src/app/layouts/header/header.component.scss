@@ -1,0 +1,22 @@
+mat-toolbar {
+  background-color: skyblue;
+  color: whitesmoke;
+  mat-icon {
+    color: whitesmoke;
+  }
+  .blog {
+    cursor: pointer;
+
+    &:hover {
+      color: yellow;
+      text-shadow: rgba(0, 0, 0, 0.5);
+    }
+  }
+  .theme-button {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+  }
+}
+.example-spacer {
+  flex: 1 1 auto;
+}

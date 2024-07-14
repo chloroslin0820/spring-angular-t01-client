@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { PostService } from '../../services/post.service';
+import { HttpErrorResponse } from '@angular/common/http';
+import { Post } from '../../types';
 
 @Component({
   selector: 'app-create-post',
@@ -11,7 +13,7 @@ import { PostService } from '../../services/post.service';
 })
 export class CreatePostComponent {
 
-  postForm!: FormGroup;
+  postForm: FormGroup = new FormGroup({});
   tags: string[] = [];
 
   constructor(
@@ -39,8 +41,8 @@ export class CreatePostComponent {
     }
   }
 
-  removeTag(tag: any) {
-    const index = this.tags.indexOf(tag);
+  removeTag(tag: string) {
+    const index: number = this.tags.indexOf(tag);
 
     if (index >= 0) {
       this.tags.splice(index, 1);
@@ -48,7 +50,7 @@ export class CreatePostComponent {
   }
 
   createPost() {
-    const data = this.postForm.value;
+    const data: Post = this.postForm.value;
     data.tags = this.tags;
 
     this.postService.createNewPost(data).subscribe(
@@ -58,7 +60,7 @@ export class CreatePostComponent {
         });
         this.router.navigateByUrl('/');
       },
-      (error) => {
+      (error: HttpErrorResponse | Error) => {
         this.snackBar.open('An error occurred while creating the post', 'Close', {
           duration: 3000,
         });

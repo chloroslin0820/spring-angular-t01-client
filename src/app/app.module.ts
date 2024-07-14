@@ -9,11 +9,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 import { CreatePostComponent } from './pages/create-post/create-post.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewAllPostsComponent } from './pages/view-all-posts/view-all-posts.component';
+import { HeaderComponent } from './layouts/header/header.component';
+import { FooterComponent } from './layouts/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CreatePostComponent
+    CreatePostComponent,
+    ViewAllPostsComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
