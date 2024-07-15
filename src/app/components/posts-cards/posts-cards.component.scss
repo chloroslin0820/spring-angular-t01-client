@@ -1,6 +1,7 @@
 mat-card {
   padding: 10px;
   background-color: var(--secondary-color);
+  margin-bottom: 10px;
 }
 
 mat-card-header {
@@ -32,6 +33,7 @@ mat-card-content {
   position: absolute;
   top: 0;
   left: 0;
+  overflow-y: scroll;
 }
 
 .bg-snow-text-sky {
