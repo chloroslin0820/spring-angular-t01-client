@@ -6,7 +6,7 @@ import { Post } from '../types';
 
 const API_URL = 
   environment.API_URL ||
-   environment.API_DEV_URL;
+  environment.API_DEV_URL;
 
 @Injectable({
   providedIn: 'root'
