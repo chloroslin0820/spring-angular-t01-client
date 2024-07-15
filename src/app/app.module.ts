@@ -13,6 +13,8 @@ import { ViewAllPostsComponent } from './pages/view-all-posts/view-all-posts.com
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { ViewPostComponent } from './pages/view-post/view-post.component';
+import { SearchPostsByNameComponent } from './pages/search-posts-by-name/search-posts-by-name.component';
+import { PostsCardsComponent } from './components/posts-cards/posts-cards.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ViewPostComponent } from './pages/view-post/view-post.component';
     ViewAllPostsComponent,
     HeaderComponent,
     FooterComponent,
-    ViewPostComponent
+    ViewPostComponent,
+    SearchPostsByNameComponent,
+    PostsCardsComponent
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,12 @@ mat-toolbar {
   mat-icon {
     color: whitesmoke;
   }
+
+  .menu-icon {
+    @media screen and (max-width: 428px) {
+      display: none;
+    }
+  }
   .blog {
     cursor: pointer;
 
@@ -17,11 +23,22 @@ mat-toolbar {
     color: var(--primary-color);
     margin: 2px;
 
-    @media screen and (max-width: 428px) {
+    @media screen and (max-width: 650px) {
       font-size: 10px;
       height: 30px;
       min-width: auto;
       padding: 0 2px;
+    }
+    @media screen and (max-width: 428px) {
+      background-color: transparent;
+      color: var(--secondary-color);
+      font-size: 12px;
+      padding: 0 1px;
+    }
+  }
+  .right-icons {
+    @media screen and (max-width: 428px) {
+      display: none;
     }
   }
 }

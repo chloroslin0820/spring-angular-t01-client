@@ -1,0 +1,26 @@
+.wrapper {
+  margin-top: 0;
+  padding-top: 0;
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  .empty {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    height: 80vh;
+  }
+  .card-container {
+    margin: 16px;
+    max-width: 60%;
+    padding-bottom: 30px;
+    margin: 0 auto;
+  
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+  }
+}

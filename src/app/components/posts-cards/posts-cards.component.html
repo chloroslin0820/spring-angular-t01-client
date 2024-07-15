@@ -1,0 +1,62 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>{{ post.name }}</mat-card-title>
+    <mat-card-subtitle style="color: darkgray"
+      >Posted By : {{ post.postedBy }} | Posted On :
+      {{ post.date | date : "medium" }}
+    </mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-grid-list cols="3">
+    <mat-grid-tile
+      class="image-tile"
+      [colspan]="3"
+      [rowspan]="1"
+      *ngIf="post.img"
+    >
+      <div>
+        <img
+          class="post-img"
+          mat-card-image
+          [src]="post.img"
+          alt="Card Image"
+        />
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="content-tile" [colspan]="3" [rowspan]="1">
+      <mat-card-content class="post-content">
+        <pre style="white-space: pre-wrap">{{
+          post.content.length > currentWordLimit
+            ? post.content.substr(0, currentWordLimit) + "..."
+            : post.content
+        }}</pre>
+      </mat-card-content>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+  <hr />
+  <mat-card-actions>
+    <button class="bg-snow-text-sky" mat-raised-button color="primary">
+      {{ post.likeCount }} <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      class="bg-snow-text-sky"
+      mat-raised-button
+      color="primary"
+      style="margin-left: 5px"
+    >
+      {{ post.viewCount }} <mat-icon>remove_red_eye</mat-icon>
+    </button>
+    <button
+      class="bg-snow-text-sky"
+      mat-raised-button
+      color="primary"
+      style="margin-left: 5px"
+      routerLink="/view-post/{{ post.id }}"
+    >
+      View Post
+    </button>
+  </mat-card-actions>
+</mat-card>

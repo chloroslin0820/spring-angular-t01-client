@@ -2,49 +2,9 @@
   margin: 16px;
   max-width: 60%;
   padding-bottom: 30px;
+  margin: 20px auto;
 
   @media (max-width: 768px) {
     max-width: 100%;
-  }
-
-  mat-card {
-    padding: 10px;
-    background-color: var(--secondary-color);
-  }
-
-  mat-card-header {
-    margin-bottom: 10px;
-  }
-
-  .example-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
-
-  .image-tile {
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-  }
-
-  .post-img {
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .content-tile {
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-    background-color: rgba($color: skyblue, $alpha: 0.1);
-  }
-
-  mat-card-content {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-
-  .bg-snow-text-sky {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
   }
 }

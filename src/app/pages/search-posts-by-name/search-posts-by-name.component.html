@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <div class="search-form">
+    <mat-form-field appearance="outline" class="search-input">
+      <mat-label>Enter keyword to search</mat-label>
+      <input matInput [(ngModel)]="name" style="color: #222" />
+      <button mat-button matSuffix (click)="searchPostsByName()">
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="empty" *ngIf="result.length == 0">
+    <mat-icon class="icon">no_sim</mat-icon>
+    <br />
+    <span>Nothing to be shown here.</span>
+  </div>
+
+  <div class="card-container" *ngIf="result.length > 0">
+    <app-posts-cards [post]="item" *ngFor="let item of result"></app-posts-cards>
+  </div>
+</div>
