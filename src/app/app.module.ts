@@ -15,6 +15,7 @@ import { FooterComponent } from './layouts/footer/footer.component';
 import { ViewPostComponent } from './pages/view-post/view-post.component';
 import { SearchPostsByNameComponent } from './pages/search-posts-by-name/search-posts-by-name.component';
 import { PostsCardsComponent } from './components/posts-cards/posts-cards.component';
+import { HomeComponent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { PostsCardsComponent } from './components/posts-cards/posts-cards.compon
     FooterComponent,
     ViewPostComponent,
     SearchPostsByNameComponent,
-    PostsCardsComponent
+    PostsCardsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

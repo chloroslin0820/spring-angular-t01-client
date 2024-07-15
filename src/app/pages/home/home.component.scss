@@ -1,0 +1,21 @@
+.wrapper {
+  background: linear-gradient(to bottom, skyblue, whitesmoke, skyblue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .hero {
+    background-image: url(../../../../public/blog_hero.webp);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media (max-width: 600px) {
+      background-size: auto 70%;
+    }
+  }
+}
