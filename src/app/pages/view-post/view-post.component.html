@@ -26,10 +26,10 @@
     </mat-chip-set>
 
     <mat-card-actions>
-      <button class="bg-snow-text-sky" mat-raised-button color="primary">
+      <button class="bg-snow-text-sky" mat-raised-button (click)="likePost()">
         {{ postData.likeCount }} <mat-icon>favorite</mat-icon>
       </button>
-      <button class="bg-snow-text-sky" mat-raised-button color="primary" style="margin-left: 5px">
+      <button class="bg-snow-text-sky" mat-raised-button style="margin-left: 5px">
         {{ postData.viewCount }} <mat-icon>remove_red_eye</mat-icon>
       </button>
     </mat-card-actions>

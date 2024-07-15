@@ -26,9 +26,20 @@ export class ViewPostComponent {
   getPostById() {
     this.postService.getPostById(this.id).subscribe((res: any) => {
       this.postData = res;
-      console.log(this.postData);
     }), (error: any) => {
       this.matSnackBar.open('Failed to get post', 'Close', {
+        duration: 2000,
+      });
+    }
+  }
+
+  likePost() {
+    this.postService.likePost(this.id).subscribe((res: any) => {
+
+      this.matSnackBar.open('Post liked successfully', 'Close', { duration: 2000 });
+      this.getPostById();
+    }), (error: any) => {
+      this.matSnackBar.open('Failed to like post', 'Close', {
         duration: 2000,
       });
     }

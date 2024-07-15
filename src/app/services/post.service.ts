@@ -25,4 +25,8 @@ export class PostService {
   getPostById(id: number): Observable<any> {
     return this.http.get<any>(API_URL + 'api/posts/' + id);
   }
+
+  likePost(id: number): Observable<any> {
+    return this.http.put<any>(API_URL + `api/posts/${id}/like`, {});
+  }
 }
