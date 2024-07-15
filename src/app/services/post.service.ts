@@ -5,7 +5,7 @@ import { environment } from '../../environments/environment.development';
 import { Post } from '../types';
 
 const API_URL = 
-  // environment.API_URL ||
+  environment.API_URL ||
    environment.API_DEV_URL;
 
 @Injectable({
