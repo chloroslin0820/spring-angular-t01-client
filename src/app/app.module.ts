@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewAllPostsComponent } from './pages/view-all-posts/view-all-posts.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
+import { ViewPostComponent } from './pages/view-post/view-post.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { FooterComponent } from './layouts/footer/footer.component';
     CreatePostComponent,
     ViewAllPostsComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ViewPostComponent
   ],
   imports: [
     BrowserModule,

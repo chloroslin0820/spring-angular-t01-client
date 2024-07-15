@@ -21,4 +21,8 @@ export class PostService {
   getAllPosts(): Observable<any> {
     return this.http.get<any>(API_URL + 'api/posts');
   }
+
+  getPostById(id: number): Observable<any> {
+    return this.http.get<any>(API_URL + 'api/posts/' + id);
+  }
 }

@@ -22,7 +22,7 @@
         <mat-card-actions>
             <button class="bg-snow-text-sky" mat-raised-button color="primary">{{ post.likeCount }} <mat-icon>favorite</mat-icon></button>
             <button class="bg-snow-text-sky" mat-raised-button color="primary" style="margin-left: 5px;">{{ post.viewCount }} <mat-icon>remove_red_eye</mat-icon></button>
-            <button class="bg-snow-text-sky" mat-raised-button color="primary" style="margin-left: 5px;">View Post</button>
+            <button class="bg-snow-text-sky" mat-raised-button color="primary" style="margin-left: 5px;" routerLink="/view-post/{{post.id}}">View Post</button>
 
         </mat-card-actions>
     </mat-card>
