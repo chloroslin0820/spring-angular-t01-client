@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment.development';
+import { Post } from '../types';
 
 const API_URL = 
   // environment.API_URL ||
@@ -14,19 +15,19 @@ export class PostService {
 
   constructor(private http: HttpClient) { }
 
-  createNewPost(data: any): Observable<any> {
+  createNewPost(data: Post): Observable<any> {
     return this.http.post<any>(API_URL + 'api/posts', data);
   }
 
   getAllPosts(): Observable<any> {
-    return this.http.get<any>(API_URL + 'api/posts');
+    return this.http.get<Post[]>(API_URL + 'api/posts');
   }
 
   getPostById(id: number): Observable<any> {
-    return this.http.get<any>(API_URL + 'api/posts/' + id);
+    return this.http.get<Post>(API_URL + 'api/posts/' + id);
   }
 
   likePost(id: number): Observable<any> {
-    return this.http.put<any>(API_URL + `api/posts/${id}/like`, {});
+    return this.http.put<Post>(API_URL + `api/posts/${id}/like`, {});
   }
 }

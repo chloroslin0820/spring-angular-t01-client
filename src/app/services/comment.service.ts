@@ -19,6 +19,10 @@ export class CommentService {
       postedBy: postedBy,
     };
 
-    return this.http.post<any>(API_URL + 'api/comments/create', content, { params });
+    return this.http.post<Comment>(API_URL + 'api/comments/create', content, { params });
+  }
+
+  getAllCommentsByPostId(postId: number): Observable<any> {
+    return this.http.get<Comment[]>(API_URL + 'api/comments/' + postId);
   }
 }

@@ -29,7 +29,11 @@
       <button class="bg-snow-text-sky" mat-raised-button (click)="likePost()">
         {{ postData.likeCount }} <mat-icon>favorite</mat-icon>
       </button>
-      <button class="bg-snow-text-sky" mat-raised-button style="margin-left: 5px">
+      <button
+        class="bg-snow-text-sky"
+        mat-raised-button
+        style="margin-left: 5px"
+      >
         {{ postData.viewCount }} <mat-icon>remove_red_eye</mat-icon>
       </button>
     </mat-card-actions>
@@ -39,24 +43,52 @@
 <div class="card-container">
   <mat-card class="comment-card">
     <mat-card-content>
-      <div style="margin-bottom: 12px;">
+      <div style="margin-bottom: 12px">
         <h4>Publish Your Comment</h4>
       </div>
       <div>
         <form [formGroup]="commentForm">
           <mat-form-field appearance="fill">
             <mat-label>Content</mat-label>
-            <textarea matInput id="content" formControlName="content"></textarea>
+            <textarea
+              matInput
+              id="content"
+              formControlName="content"
+            ></textarea>
           </mat-form-field>
 
           <mat-form-field appearance="fill">
             <mat-label>Posted By</mat-label>
-            <input matInput formControlName="postedBy">
+            <input matInput formControlName="postedBy" />
           </mat-form-field>
 
-          <button mat-raised-button (click)="publishComment()" class="bg-snow-text-sky" style="float: right;" [disabled]="!commentForm.valid">Publish Comment</button>
+          <button
+            mat-raised-button
+            (click)="publishComment()"
+            class="bg-snow-text-sky"
+            style="float: right"
+            [disabled]="!commentForm.valid"
+          >
+            Publish Comment
+          </button>
         </form>
       </div>
     </mat-card-content>
   </mat-card>
+
+  <div style="margin: 30px auto 0">
+    <h4>Comments</h4>
+    <mat-card style="margin-top: 10px" *ngFor="let comment of comments">
+      <div style="display: flex">
+        <div mat-card-avatar class="example-header-image" style="margin-right: 12px;"></div>
+        <div>
+          <mat-card-title>{{ comment.postedBy }}</mat-card-title>
+          <mat-card-subtitle style="color: darkgray">{{
+            comment.createdAt | date : "medium"
+          }}</mat-card-subtitle>
+        </div>
+      </div>
+      <mat-card-content>{{ comment.content }}</mat-card-content>
+    </mat-card>
+  </div>
 </div>
