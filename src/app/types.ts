@@ -9,3 +9,11 @@ export interface Post {
     viewCount?: number,
     tags?: string[],
 }
+
+export interface Comment {
+    id?: number;
+    post: Post;
+    content: string;
+    postedBy: string;
+    createdAt?: Date;
+}

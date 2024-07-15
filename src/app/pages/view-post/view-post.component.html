@@ -35,3 +35,28 @@
     </mat-card-actions>
   </mat-card>
 </div>
+
+<div class="card-container">
+  <mat-card class="comment-card">
+    <mat-card-content>
+      <div style="margin-bottom: 12px;">
+        <h4>Publish Your Comment</h4>
+      </div>
+      <div>
+        <form [formGroup]="commentForm">
+          <mat-form-field appearance="fill">
+            <mat-label>Content</mat-label>
+            <textarea matInput id="content" formControlName="content"></textarea>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Posted By</mat-label>
+            <input matInput formControlName="postedBy">
+          </mat-form-field>
+
+          <button mat-raised-button (click)="publishComment()" class="bg-snow-text-sky" style="float: right;" [disabled]="!commentForm.valid">Publish Comment</button>
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
