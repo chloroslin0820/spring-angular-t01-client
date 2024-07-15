@@ -3,6 +3,10 @@
   max-width: 60%;
   padding-bottom: 30px;
 
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
   mat-card {
     padding: 10px;
     background-color: var(--secondary-color);
@@ -31,10 +35,6 @@
     border: 1px solid var(--primary-color);
     border-radius: 8px;
     background-color: rgba($color: skyblue, $alpha: 0.1);
-  }
-
-  .post-content {
-    padding-top: 0;
   }
 
   mat-card-content {

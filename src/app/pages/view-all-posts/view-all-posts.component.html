@@ -13,7 +13,7 @@
 
             <mat-grid-tile class="content-tile" [colspan]="3" [rowspan]="1">
                 <mat-card-content class="post-content">
-                <pre style="white-space: pre-wrap;">{{ post.content.length > 420 ? (post.content.substr(0, 420) + '...') : (post.content)}}</pre>
+                <pre style="white-space: pre-wrap;">{{ post.content.length > currentWordLimit ? (post.content.substr(0, currentWordLimit) + '...') : (post.content)}}</pre>
                 </mat-card-content>
             </mat-grid-tile>
         </mat-grid-list>
